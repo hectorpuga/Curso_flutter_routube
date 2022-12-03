@@ -1,0 +1,64 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(title: 'Material App', home: MyHomePage());
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  String name = "Hector";
+  double p = 00;
+  bool v = false;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("GesturedDetector")),
+      drawer: const Drawer(),
+      body: Center(
+        child: Column(
+          children: const <Widget>[ListItem(), ListItem(), ListItem()],
+        ),
+      ),
+    );
+  }
+}
+
+class ListItem extends StatelessWidget {
+  const ListItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+        onTap: onTap,
+        onLongPress: _onLongPress,
+        child: Row(
+          children: const <Widget>[
+            Icon(Icons.folder),
+            SizedBox(
+              width: 20,
+            ),
+            Text("Mis Videos")
+          ],
+        ));
+  }
+
+  void onTap() {}
+
+  void _onLongPress() {}
+}
+

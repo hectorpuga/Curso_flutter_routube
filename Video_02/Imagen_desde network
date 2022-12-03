@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Material App Bar'),
+        ),
+        body: Center(
+          child: Image.network(
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRnmu3ZbT_HtQTmwP9aNMOGjUp3US_Rv5OcQ&usqp=CAU",
+            height: 100,
+            width: 50,
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+    );
+  }
+}
+

@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Material App Bar'),
+          ),
+          body: SizedBox(
+            //permite usar la intruccion siguiente
+            width: double
+                .infinity, //no permite hacer que una columna agarre todo el ancho de la pantalla
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start, //Por defecto //Vertical
+              //mainAxisAlignment: MainAxisAlignment.end, al final //Horizontal
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.red,
+                ),
+                Text("Hola estoy en una columna"),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.blue,
+                ),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.yellow,
+                ),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.purple,
+                ),
+              ],
+            ),
+          )),
+    );
+  }
+}
+

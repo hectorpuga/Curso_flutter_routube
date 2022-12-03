@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Material App Bar'),
+          ),
+          body: ListView(
+            children: <Widget>[
+              Image.asset("assets/img.jpeg"),
+              Image.asset("assets/img2.jpeg"),
+              Image.asset("assets/img3.jpeg"),
+              Image.asset("assets/img5.jpeg"),
+              Image.asset("assets/img6.jpg")
+            ],
+          )),
+    );
+  }
+}
+
+
+
+//archivo pubspec.yaml
+
+ assets:
+    - assets/img.jpeg
+    - assets/img2.jpeg
+    - assets/img3.jpeg
+    - assets/img5.jpeg
+    - assets/img6.jpg
+

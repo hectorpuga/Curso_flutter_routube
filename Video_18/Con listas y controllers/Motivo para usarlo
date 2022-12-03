@@ -1,0 +1,1 @@
+Lo que pasa es que cuando tienes varios componentes en un listview, los cuales superan el largo de tu pantalla, al momento de dezlizar hacia abajo, si tu tienes valores arriba en un textfiel, esos valores se perderan, por lo cual se utiliza un controller, ya que lo que hace dicha propiedad, es aguardar los datos de los texfield para que asi no se pierdan

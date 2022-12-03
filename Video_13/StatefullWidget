@@ -1,0 +1,86 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(title: 'Material App', home: MyHomePage());
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  String name = "Hector";
+  double p = 00;
+  bool v = false;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Mi Aplicacion")),
+      drawer: const Drawer(),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Text(
+              name,
+              style: const TextStyle(fontSize: 30),
+            ),
+            LinearProgressIndicator(
+              value: p,
+            ),
+            Switch(
+                value: v,
+                onChanged: (value) {
+                  setState(() {
+                    v = value;
+                  });
+                })
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: Cha,
+      ),
+    );
+  }
+
+  void Cha() {
+    setState(() {
+      if (name == "Hector") {
+        name = "Alejandro";
+      } else {
+        name = "Hector";
+      }
+    });
+    p += 0.01;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(const Duration(seconds: 1), (value) {
+      Cha();
+      // v = !v;
+    });
+  }
+
+  @override
+  void dispose() {
+    // ignore: todo
+    // TODO: implement dispose
+    super.dispose();
+  }
+}
+

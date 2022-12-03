@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Material App Bar'),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text("Activar Sonido"),
+                    ),
+                    Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    )
+                  ],
+                ),
+                Divider(
+                  color: Colors.red,
+                  height: 50,
+                  thickness: 20,
+                ),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text("Activar Sonido"),
+                    ),
+                    Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    )
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.black,
+                    ),
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.black,
+                    ),
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.black,
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )),
+    );
+  }
+}
+
